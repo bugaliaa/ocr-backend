@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: ocr
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ocr
+    username: prod
+    password: univest123
+    driverClassName: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: app-conn-pool
+      leak-detection-threshold: 0
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+cloud:
+  aws:
+    s3-bucket:
+    s3-common-bucket:
+    credentials:
+      profile-name:
+      access-key:
+      secret-key:
+    region:
+      static: ap-south-1
+      auto: false
+    stack:
+      auto: false
+app:
+  otpHash: LJzNr1YiSUh
+  security:
+    jwt:
+      secret: DoCBmmc6hvxGOJu3hx6Fs6scWtMY8aHKjYab8WY3g9a6b7sqKEE45mlOiRcQFyF
+      validity: 1296000000
