@@ -10,14 +10,23 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://localhost:5432/ocr
-    username: prod
-    password: univest123
+    url: jdbc:postgresql://localhost:5432/ocr_db
+    username: ocr
+    password: siddhant
     driverClassName: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       pool-name: app-conn-pool
       leak-detection-threshold: 0
+  flyway:
+    user: ocr
+    password: siddhant
+    schemas: public
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/ocr_db
+    location: classpath://db/migration
+    baseline-version: 0.0.1
+    baseline-on-migrate: true
   jackson:
     property-naming-strategy: SNAKE_CASE
 cloud:

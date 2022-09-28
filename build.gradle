@@ -27,6 +27,7 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-aws-messaging:2.2.6.RELEASE'
     implementation 'software.amazon.awssdk:pinpoint:2.17.209'
     implementation 'org.postgresql:postgresql'
+    implementation 'org.flywaydb:flyway-core'
     implementation 'org.apache.commons:commons-lang3'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
